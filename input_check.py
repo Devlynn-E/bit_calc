@@ -1,13 +1,14 @@
 def user_choice():
 
+    text_ok = ["text", "t", "txt"]
+    image_ok = ["image", "img", "pix", "picture", "pic", "p"]
+    int_ok = ["integer", "int", "#", "num", "number"]
+
     valid = False
     while not valid:
 
         response = input("file type (integer / text / image): ").lower()
 
-        text_ok = ["text", "t", "txt"]
-        image_ok = ["image", "img", "pix", "picture", "pic", "p"]
-        int_ok = ["integer", "int", "#", "num", "number"]
         if response in text_ok:
             return "text"
 
@@ -33,5 +34,4 @@ keep_going = ""
 while keep_going == "":
     data_type = user_choice()
     print("you chose", data_type)
-
     print()
