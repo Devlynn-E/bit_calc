@@ -37,3 +37,14 @@ def num_check(question, low):
 
         except ValueError:
             print(error)
+
+
+keep_going = ""
+while keep_going == "":
+    print()
+    var_int = num_check("enter an integer: ", 0)
+    print()
+
+    image_width = num_check("image width? ", 1)
+    print()
+    image_height = num_check("image height? ", 1)
