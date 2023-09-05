@@ -52,3 +52,6 @@ def int_bits():
     print()
 
     return ""
+
+
+int_bits()
