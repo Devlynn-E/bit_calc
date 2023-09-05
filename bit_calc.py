@@ -133,9 +133,16 @@ def image_bits():
     return ""
 
 
-statement_gen("bit calc for int, txt, img", "-")
+statement_gen("bit calculator for images, text, and integers", "-")
 
-print("\n")
+instructions = float(input("would you like instructions? <y> for yes, <n> for no").lower())
+
+instructions_yes = ["y"]
+
+if instructions in instructions_yes:
+    print("\n")
+# your not finsished
+print("\n{}".format(statement_gen))
 
 keep_going = ""
 while keep_going == "":
@@ -154,4 +161,3 @@ while keep_going == "":
 
     keep_going = input("\nPress <enter> to continue or <any> to quit ")
     print()
-    
