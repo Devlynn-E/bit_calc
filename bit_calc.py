@@ -84,6 +84,55 @@ def num_check(question, low):
             print(error)
 
 
+def int_bits():
+
+    var_int = num_check("please enter an integer: ", 0)
+
+    var_binary = "{0:b}".format(var_int)
+
+    num_bits = len(var_binary)
+
+    print("\n{} in binary is {}".format(var_int, var_binary))
+    print("# of bits is {}".format(num_bits))
+    print()
+
+    return ""
+
+
+def text_bits():
+
+    print()
+
+    var_text = input("enter some text: ")
+
+    var_length = len(var_text)
+    num_bits = 8 * var_length
+
+    print("\n\'{}\' has {} characters ...".format(var_text, var_length))
+    print("# of bits {} x 8...".format(var_length))
+    print("we need {} bits to represent {}".format(num_bits, var_text))
+    print()
+
+    return ""
+
+
+def image_bits():
+
+    image_width = num_check("image width? ", 1)
+    image_height = num_check("image height? ", 1)
+
+    num_pixels = image_width * image_height
+
+    num_bits = num_pixels * 24
+
+    print()
+    print("# of pixels = {} x {} = {}".format(image_height, image_width, num_pixels))
+    print("# of bits = {} x 24 = {}".format(num_pixels, num_bits))
+    print()
+
+    return ""
+
+
 statement_gen("bit calc for int, txt, img", "-")
 
 print("\n")
@@ -95,13 +144,14 @@ while keep_going == "":
     print("You chose", data_type)
 
     if data_type == "integer":
-        var_int = num_check("enter an integer: ", 0)
+        int_bits()
 
     elif data_type == "image":
-        image_width = num_check("image width? ", 1)
-        print()
-        image_height = num_check("image height? ", 1)
+        image_bits()
 
     else:
-        var_text = input("enter some text: ")
-        
+        text_bits()
+
+    keep_going = input("\nPress <enter> to continue or <any> to quit ")
+    print()
+    
