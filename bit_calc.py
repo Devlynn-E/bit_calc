@@ -135,13 +135,14 @@ def image_bits():
 
 statement_gen("bit calculator for images, text, and integers", "-")
 
-instructions = float(input("would you like instructions? <y> for yes, <n> for no").lower())
+instructions = input("would you like instructions? <y> for yes, <n> for no")
 
 instructions_yes = ["y"]
 
 if instructions in instructions_yes:
-    print("\n")
-# your not finsished
+    print("\nwhen prompted, type in what type of file you are calculating. If you are calculating image you will need")
+    print("to input the length and width. with integer you just need to input the #, same with text except with words")
+
 print("\n{}".format(statement_gen))
 
 keep_going = ""
